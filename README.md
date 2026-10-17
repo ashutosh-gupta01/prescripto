@@ -1,57 +1,54 @@
 # Prescripto – Doctor Appointment Booking System
 
-Prescripto is a full-stack doctor appointment booking application built using the MERN stack. It helps patients explore doctors, manage appointments, and maintain their profiles through a responsive user interface.
+Prescripto is a full-stack doctor appointment booking application built using the MERN stack. It allows patients to explore doctors and manage appointments, while doctors and administrators can manage their respective operations through role-based interfaces.
 
-## Features
+## 🌐 Live Demo
 
-- **User Authentication:** Secure login and registration using JWT authentication.
+- **Patient Website:** [Visit Prescripto](https://prescripto-frontend-0f7u.onrender.com/)
+- **Admin Panel:** [Open Admin Dashboard](https://prescripto-admin-lliu.onrender.com/)
+- **Backend API:** [API Health Check](https://prescripto-backend-xvjr.onrender.com/)
+
+## ✨ Features
+
+- **Role-Based Access Control (RBAC):** Role-specific access for patients, doctors, and administrators, based on implemented permissions.
+- **Authentication:** User registration, login, and JWT-based authentication.
 - **Doctor Listings:** Browse doctors and view their profiles and specializations.
 - **Appointment Booking:** Book and manage doctor appointments.
-- **User Profiles:** View and update personal profile information.
-- **Role-Based Access:** Separate functionality for patients, doctors, and administrators, according to the implemented roles.
-- **Responsive UI:** Interface designed for desktop and mobile screens.
-- **Backend APIs:** RESTful APIs for application data and operations.
-- **Database Management:** MongoDB integration for storing application data.
+- **Profile Management:** View and update personal information.
+- **Admin Dashboard:** Manage doctors, appointments, and application data according to admin permissions.
+- **RESTful APIs:** Backend endpoints for communication between the frontend and server.
+- **Responsive UI:** User-friendly interface designed for different screen sizes.
+- **Database Integration:** Store and manage application data using MongoDB.
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 **Frontend**
 - React.js
 - JavaScript
-- HTML5 and CSS3
+- HTML5
+- CSS3
 
 **Backend**
 - Node.js
 - Express.js
-- REST APIs
+- RESTful APIs
 - JWT Authentication
 
 **Database and Services**
 - MongoDB
-- Cloudinary for image storage, if configured
-- Additional integrations as implemented in the project
+- Cloudinary for image uploads, if configured
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
-Prescripto/
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── package.json
-├── backend/
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   └── package.json
+prescripto/
+├── admin/          # Admin dashboard
+├── frontend/       # Patient-facing application
+├── backend/        # Server and REST APIs
 └── README.md
 ```
 
-*Note: Update the folder names above if your repository uses a different structure.*
-
-## Getting Started
+## ⚙️ Getting Started
 
 ### Prerequisites
 
@@ -68,23 +65,32 @@ cd prescripto
 
 ### 2. Install Dependencies
 
-Open a terminal in the backend directory:
+Install dependencies separately for each application.
+
+**Backend**
 
 ```bash
 cd backend
 npm install
 ```
 
-Open another terminal in the frontend directory:
+**Patient Frontend**
 
 ```bash
-cd frontend
+cd ../frontend
+npm install
+```
+
+**Admin Panel**
+
+```bash
+cd ../admin
 npm install
 ```
 
 ### 3. Configure Environment Variables
 
-Create the required `.env` file in the backend directory according to your existing application configuration.
+Create the required `.env` file in the backend directory using the variable names expected by your application.
 
 Example:
 
@@ -94,51 +100,56 @@ MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 ```
 
-Add any other variables required by your project, such as Cloudinary credentials.
+Add other environment variables required by your project, such as Cloudinary credentials. Configure frontend API URLs for your local or deployed environment as needed.
 
 **Security:** Never commit real API keys, database credentials, or JWT secrets to GitHub.
 
 ### 4. Run the Application
 
-Start the backend from its directory:
+Start the backend using the command configured in its `package.json`. For example:
 
 ```bash
 npm run server
 ```
 
-If this script is not defined in your backend `package.json`, use the actual start script configured in your project.
-
-Start the frontend in a separate terminal:
+Start the patient frontend in a separate terminal using its configured script. For a Vite project:
 
 ```bash
 npm run dev
 ```
 
-If your frontend uses Create React App, use `npm start` instead.
+Start the admin panel in another terminal using its configured script. For a Vite project:
 
-## What I Learned
+```bash
+npm run dev
+```
 
-- Building a full-stack application using React, Node.js, Express, and MongoDB.
-- Creating and integrating RESTful APIs.
-- Implementing JWT-based authentication.
-- Managing application state and reusable React components.
-- Connecting frontend forms and interfaces with backend services.
-- Debugging API integration and deployment issues.
+If either frontend uses Create React App, run `npm start` instead. Check each `package.json` for the exact available scripts.
 
-## Future Improvements
+## 📚 Key Learning Outcomes
+
+- Full-stack development using the MERN stack.
+- Implementing JWT-based authentication and role-based authorization.
+- Building and integrating RESTful APIs.
+- Managing application data with MongoDB.
+- Creating reusable React components and dashboard interfaces.
+- Debugging frontend-backend integration issues.
+- Deploying frontend and backend services.
+
+## 🚀 Future Improvements
 
 - Appointment reminders and notifications.
-- Improved appointment filtering and search.
-- Enhanced dashboards and analytics.
-- Additional accessibility and user experience improvements.
+- Advanced doctor search and filtering.
+- Enhanced dashboard analytics.
+- Improved accessibility and user experience.
 
-## Author
+## 👨‍💻 Author
 
 **Aashutosh Gupta**
 
-- GitHub: [ashutosh-gupta01](https://github.com/ashutosh-gupta01)
-- LinkedIn: [Aashutosh Gupta](https://www.linkedin.com/in/aashutosh-kumar-gupta-0561ab265/)
-- Portfolio: [Personal Portfolio](https://personalportfolio-bzqy.onrender.com)
+- **GitHub:** [ashutosh-gupta01](https://github.com/ashutosh-gupta01)
+- **LinkedIn:** [Aashutosh Gupta](https://www.linkedin.com/in/aashutosh-kumar-gupta-0561ab265/)
+- **Portfolio:** [Personal Portfolio](https://personalportfolio-bzqy.onrender.com)
 
 ---
 
